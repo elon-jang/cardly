@@ -215,7 +215,7 @@ function AppContent() {
     <div className="container">
       <header className="header">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-          <h1>CardGenius</h1>
+          <h1>Cardly</h1>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             <span style={{ fontSize: '0.875rem', color: 'var(--text-secondary)' }}>
               {user.email}

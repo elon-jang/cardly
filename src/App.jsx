@@ -230,9 +230,11 @@ function AppContent() {
             </button>
           </div>
         </div>
-        <p className="tagline">
-          Create professional business cards in seconds
-        </p>
+        <div className="hero-section">
+          <h2 className="hero-tagline">
+            Create professional business cards <span className="highlight">in seconds</span>
+          </h2>
+        </div>
       </header>
 
       {/* Tab Navigation */}
@@ -307,7 +309,11 @@ function AppContent() {
           </>
         ) : activeTab === 'saved' ? (
           <div style={{ width: '100%' }}>
-            <SavedCards ref={savedCardsRef} onLoadCard={handleLoadCard} />
+            <SavedCards
+              ref={savedCardsRef}
+              onLoadCard={handleLoadCard}
+              onCreateCard={() => setActiveTab('create')}
+            />
           </div>
         ) : (
           <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto' }}>

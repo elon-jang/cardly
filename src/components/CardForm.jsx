@@ -49,6 +49,7 @@ export default function CardForm({ data, onChange, onImageChange, customImages =
           <option value="elegant">Classic Elegant</option>
           <option value="creative">Artistic Creative</option>
           <option value="organic">Soft Organic</option>
+          <option value="sophisticated">Sophisticated Warm</option>
         </select>
       </div>
 

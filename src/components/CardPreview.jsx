@@ -45,6 +45,13 @@ export default function CardPreview({ data }) {
         <div className="elegant-border"></div>
       )}
 
+      {layout === 'sophisticated' && (
+        <>
+          <div className="sophisticated-frame"></div>
+          <div className="sophisticated-accent"></div>
+        </>
+      )}
+
       <div className={`card-image-section ${imageGradient ? 'has-gradient' : ''}`}>
         {image ? (
           <img src={image} alt="Card" />

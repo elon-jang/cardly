@@ -651,7 +651,9 @@ textarea {
 
 /* Standard (Rectangular) - Gradient on text side (Right) */
 .layout-standard .card-image-section.has-gradient,
-.layout-bold .card-image-section.has-gradient {
+.layout-bold .card-image-section.has-gradient,
+.layout-creative .card-image-section.has-gradient,
+.layout-geometric .card-image-section.has-gradient {
   -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
   mask-image: linear-gradient(to right, black 90%, transparent 100%);
 }
@@ -659,8 +661,7 @@ textarea {
 /* Organic, Elegant, Creative, Geometric (Non-Rectangular) - Radial Gradient */
 .layout-organic .card-image-section.has-gradient,
 .layout-elegant .card-image-section.has-gradient,
-.layout-creative .card-image-section.has-gradient,
-.layout-geometric .card-image-section.has-gradient {
+.layout-sophisticated .card-image-section.has-gradient {
   -webkit-mask-image: radial-gradient(circle at center, black 80%, transparent 100%);
   mask-image: radial-gradient(circle at center, black 80%, transparent 100%);
 }
@@ -1384,4 +1385,96 @@ textarea {
   .tab-btn {
     padding: 0.75rem;
   }
+}
+
+/* Sophisticated Layout */
+.layout-sophisticated {
+  background-color: #fdfbf7;
+  color: #44403c;
+  font-family: 'Playfair Display', serif;
+}
+
+.theme-dark.layout-sophisticated,
+.theme-navy.layout-sophisticated {
+  background-color: #1c1917;
+  color: #e7e5e4;
+}
+
+.layout-sophisticated .card-content {
+  padding: 2.5rem;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+
+.layout-sophisticated .card-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.layout-sophisticated .card-title {
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.layout-sophisticated .card-title::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  background: currentColor;
+  opacity: 0.3;
+}
+
+.layout-sophisticated .card-image-section {
+  width: 45%;
+  margin: 1.5rem;
+  border-radius: 100px 100px 0 0;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.sophisticated-frame {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  border: 1px solid currentColor;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.sophisticated-accent {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.03;
+  top: -50px;
+  right: -50px;
+  pointer-events: none;
+}
+
+.layout-sophisticated .card-details {
+  gap: 0.8rem;
+}
+
+.layout-sophisticated .detail-item {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
 }
